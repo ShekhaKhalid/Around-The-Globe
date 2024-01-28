@@ -13,6 +13,7 @@ public class Counting : MonoBehaviour
     public Animator[] image;
     public int i;
     private bool isAudioPlaying = false;
+    public GameObject canva;
     public void addOne()
     {
         bones++;
@@ -22,6 +23,7 @@ public class Counting : MonoBehaviour
             anim.SetBool("Talk", true);
             isAudioPlaying = true;
             talking.Play();
+            canva.SetActive(true);
             StartCoroutine(Count1());
             
         }
