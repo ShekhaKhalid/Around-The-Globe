@@ -1,14 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class watchUI : MonoBehaviour
-{
-    public GameObject canvas;
+using UnityEngine.SceneManagement; 
 
-    public void UIsetActeve()
+public class WatchUI : MonoBehaviour
+{
+    public GameObject MenuCanvas;
+    public GameObject FossilCnves;
+    public GameObject InstructionsCnves;
+
+    void Start()
     {
 
-        canvas.SetActive(true);
+        MenuCanvas.SetActive(false);
+        FossilCnves.SetActive(false);
+        InstructionsCnves.SetActive(false);
+
+    }
+    public void OpenMenu()
+    {
+        MenuCanvas.SetActive(!MenuCanvas.activeSelf);
+    }
+
+    public void CloseMenu()
+    {
+        MenuCanvas.SetActive(false);
+    }
+
+
+    public void OpenFossil()
+    {
+        FossilCnves.SetActive(!FossilCnves.activeSelf);
+    }
+
+
+    public void CloseFossil()
+    {
+        FossilCnves.SetActive(false);
+    }
+
+
+
+
+    public void OpenInstructions()
+    {
+        InstructionsCnves.SetActive(!InstructionsCnves.activeSelf);
+    }
+
+
+    public void CloseInstructions()
+    {
+        InstructionsCnves.SetActive(false);
+    }
+
+
+
+
+    public void ChangeToGalleryScene()
+    {
+        SceneManager.LoadScene("Gallery"); 
     }
 }
