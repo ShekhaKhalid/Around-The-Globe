@@ -56,6 +56,6 @@ public class WatchUI : MonoBehaviour
 
     public void ChangeToGalleryScene()
     {
-        SceneManager.LoadScene("Gallery"); 
+        SceneManager.LoadScene("newGallery"); 
     }
 }
