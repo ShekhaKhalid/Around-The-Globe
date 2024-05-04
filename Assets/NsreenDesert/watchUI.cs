@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
 
 public class WatchUI : MonoBehaviour
 {
@@ -9,12 +9,11 @@ public class WatchUI : MonoBehaviour
 
     void Start()
     {
-
         MenuCanvas.SetActive(false);
         FossilCnves.SetActive(false);
         InstructionsCnves.SetActive(false);
-
     }
+
     public void OpenMenu()
     {
         MenuCanvas.SetActive(!MenuCanvas.activeSelf);
@@ -25,37 +24,33 @@ public class WatchUI : MonoBehaviour
         MenuCanvas.SetActive(false);
     }
 
-
     public void OpenFossil()
     {
         FossilCnves.SetActive(!FossilCnves.activeSelf);
     }
-
 
     public void CloseFossil()
     {
         FossilCnves.SetActive(false);
     }
 
-
-
-
     public void OpenInstructions()
     {
         InstructionsCnves.SetActive(!InstructionsCnves.activeSelf);
     }
-
 
     public void CloseInstructions()
     {
         InstructionsCnves.SetActive(false);
     }
 
-
-
-
     public void ChangeToGalleryScene()
     {
-        SceneManager.LoadScene("newGallery"); 
+        SceneManager.LoadScene("newGallery");
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 }
