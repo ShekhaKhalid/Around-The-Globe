@@ -11,7 +11,7 @@ public class Cleaning : MonoBehaviour
     private Material material;
     private Color startColor;
     private bool isTransitioning = false;
-
+    public bool isClean = false;
     private void Start()
     {
         // Get the Mesh Renderer component and the material
@@ -21,7 +21,7 @@ public class Cleaning : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Brush")
+        if(collision.gameObject.tag == "Brush" && !isClean)
         {
 
             StartCoroutine(TransitionColor());
@@ -51,5 +51,6 @@ public class Cleaning : MonoBehaviour
         material.color = targetColor;
 
         isTransitioning = false;
+        isClean = true;
     }
 }
