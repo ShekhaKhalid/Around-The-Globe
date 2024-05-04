@@ -7,15 +7,31 @@ public class LoadScene : MonoBehaviour
 {
     [SerializeField] private GameObject egyptBone;
     [SerializeField] private GameObject nameGameObject;
+
+    public GameObject Bon;
+
+    void Start()
+    {
+
+        //if (PlayerPrefs.GetInt("Bon", 0) == 1)
+        //{
+
+        //    Bon.SetActive(true);
+        //}
+        //else
+        //{
+        //    Bon.SetActive(false);
+        //}
+    }
     public void loadGallery()
     {
-        SceneManager.LoadScene("Gallery");
+        SceneManager.LoadScene("newGallery");
     }
 
     public void loadEgypt()
     {
         SceneManager.LoadScene("Egypt");
-        egyptBone.SetActive(true);
+        //egyptBone.SetActive(true);
     }
 
     public void loadMainMenu()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Counting : MonoBehaviour
 {
@@ -13,7 +14,19 @@ public class Counting : MonoBehaviour
     public Animator[] image;
     public int i;
     private bool isAudioPlaying = false;
-    public void addOne()
+
+    public bool showBone = false;
+    public event System.Action OnShowBoneChanged;
+
+
+    void Start()
+    {
+
+        PlayerPrefs.SetInt("Bone", 1);
+        PlayerPrefs.Save();
+    }
+
+        public void addOne()
     {
         bones++;
         if (bones == 2)
@@ -22,6 +35,8 @@ public class Counting : MonoBehaviour
             anim.SetBool("Talk", true);
             isAudioPlaying = true;
             talking.Play();
+            PlayerPrefs.SetInt("Bon", 1);
+            PlayerPrefs.Save();
             StartCoroutine(Count1());
             
         }
@@ -31,9 +46,15 @@ public class Counting : MonoBehaviour
         if (isAudioPlaying && !talking.isPlaying)
         {
             isAudioPlaying = false;
-            SceneManager.LoadScene("Gallery");
+
+            //OnShowBoneChanged();
+
+            showBone = true;
+            OnShowBoneChanged?.Invoke();
+            SceneManager.LoadScene("newGallery");
         }
     }
+    
     private IEnumerator Count1()
     {
         yield return new WaitForSeconds(3);

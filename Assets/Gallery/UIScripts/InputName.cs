@@ -34,7 +34,7 @@ public class InputName : MonoBehaviour
        
         PlayerPrefs.SetString("PlayerName", playerName);
 
-        SceneManager.LoadSceneAsync("Gallery");
+        SceneManager.LoadSceneAsync("newGallery");
     }
 }
 
