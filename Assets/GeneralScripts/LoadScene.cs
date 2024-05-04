@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     [SerializeField] private GameObject egyptBone;
+    [SerializeField] private GameObject nameGameObject;
     public void loadGallery()
     {
         SceneManager.LoadScene("Gallery");
@@ -32,5 +33,11 @@ public class LoadScene : MonoBehaviour
     public void QuitApp()
     {
         Application.Quit();
+    }
+
+    public void ShowName()
+    {
+        nameGameObject.SetActive(true);
+
     }
 }
