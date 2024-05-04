@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Gallery/Scenes/Gallery.unity
     guid: ed5fc6c313ec31a478dda578f264c644
   - enabled: 1
-    path: Assets/Scenes/Egypt.unity
-    guid: f5242b929881c564e854d32275d0beb1
+    path: Assets/BonsChangesScene/home.unity
+    guid: 7275ccac0bd507b4b8ecd12dea08b80c
+  - enabled: 1
+    path: Assets/BonsChangesScene/Shope.unity
+    guid: 3e22b8de3d49abc42b1f6fca035bb137
+  - enabled: 1
+    path: Assets/NsreenGallery/newGallery.unity
+    guid: 1fb90a5ca2ccca848b13701d808941da
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: cf8898536745b87409581a7fc506384a,
       type: 2}
